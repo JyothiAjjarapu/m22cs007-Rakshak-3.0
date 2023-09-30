@@ -1,0 +1,311 @@
+
+body 
+{
+    font-family: "Roboto", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(211, 211, 211, 0.027);
+    color: #333;
+}
+
+
+header 
+{
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(181, 210, 195, 0.685);
+}
+
+header h1 
+{
+    text-transform: uppercase;
+    font-size: 36px;
+    margin: 0;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(221, 225, 222, 0.377);
+}
+
+header img 
+{
+    max-width: 120px;
+    height: auto;
+}
+
+.container 
+{
+    display: flex;
+    flex-direction: column;
+    
+    margin-top: 20px;
+}
+
+.dropdown-container 
+{
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 0px;
+}
+
+.dropdown 
+{
+    font-size: 18px;
+    padding: 10px;
+    background-color: #90b1cc57;
+    color: rgb(98, 101, 112);
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px; /* Added margin */
+}
+.patient-section {
+    
+    background-color: rgba(149, 160, 195, 0.323);
+    display: flex;
+    align-items: center; /* Center-align the contents vertically */
+    /* Create space between the contents and the margins */
+    padding: 10px;
+    margin: 20px 0;
+        
+   
+}
+
+
+.patient-details-box 
+{
+    
+    background-color: #f5f5f5; /* Light background color */
+    padding: 10px; /* Added padding */
+    border-radius: 10px; /* Added border radius */
+}
+
+.patient-box 
+{
+    display: flex;
+    justify-content: center;
+   
+    background-color: #f5f5f5; /* Light background color */
+    padding: 10px; /* Added padding */
+    border-radius: 10px; /* Added border radius */
+    margin-right: 20px; /* Added margin */
+    margin-left: 20px; /* Added margin */
+}
+
+.patient-box img 
+{
+    max-width: 100px; /* Increased image size */
+    height: auto;
+    border-radius: 10px; /* Added border radius */
+}
+
+.patient-info 
+{
+    padding: 20px; /* Added padding */
+}
+/* Style for the patient details box */
+.patient-details-box {
+    display: flex;
+   
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+}
+
+
+/* Style for the patient details container */
+.patient-details-container {
+    flex: 1; /* Expand to fill available space */
+    display: flex;
+    flex-direction: column; /* Place patient details box below dropdown for doctors */
+    max-width: 400px; /* Limit the width of the patient details box */
+}
+
+
+/* Style for the patient info (to be placed on the right) */
+.patient-info {
+    flex: 1; /* Expand to fill available space */
+    padding: 10px; /* Added padding for spacing */
+}
+
+/* Style for other patient details (smaller font size, etc.) */
+.patient-name {
+    font-size: 16px; /* Adjust font size as needed */
+}
+
+.patient-info p {
+    font-size: 12px; /* Adjust font size as needed */
+    margin: 2px 0; /* Add margin for spacing between details */
+}
+
+.patient-name 
+{
+    font-size: 28px;
+    margin: 0;
+    color: maroon;
+}
+
+.patient-details p 
+{
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+
+.data-section 
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* Added space between sections */
+    margin-top: 20px;
+
+}
+.data-text 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.data-text p 
+{
+    font-size: 40px; /* Adjust the data value font size */
+    margin: 0;
+    color: #802218; /* Set data value color */
+} 
+
+.data-box 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 48%; /* Adjusted width for two boxes with space between */
+    padding: 20px;
+    background-color: rgba(79, 146, 111, 0.126);
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    margin: 10px
+}
+
+.data-box-inner 
+{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding:10px
+    margin: 15px;
+}
+
+.data-box img 
+{
+    max-width: 60px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.subtitle-small 
+{
+    font-size: 12px; /* Decreased subtitle font size */
+    color: maroon;
+    margin: 0;
+}
+
+.data-value 
+{
+    font-size: 35px;
+    margin: 0;
+    color: #802218;
+    display: inline-block; /* Display as inline block */
+    vertical-align: middle; /* Vertically align to middle */
+}
+
+
+.graph 
+{
+    width: 95%; /* Adjusted graph width */
+    height: 200px; /* Adjusted graph height */
+    background-color: white; /* Set graph background color to white */
+    border: 1px solid lightgrey; /* Added border */
+    border-radius: 8px; /* Added border radius */
+    margin-top: 8px; /* Added margin */
+    margin-bottom: 8px; /* Added margin */
+} 
+
+.title {
+    text-transform: uppercase;
+    font-family: "URW Chancery L, cursive"; /* Change "Your Desired Font" to the font you want */
+    font-size: 48px; /* Adjust the font size as needed */
+    font-weight: 700; /* Adjust the font weight as needed */
+    color: rgb(56, 44, 100);
+    margin: 0;
+}
+
+
+/* Header content section */
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/* Style adjustments for the soldier image container */
+.soldier-image-container {
+    flex: 0 0 auto;
+    margin-left: 400px; /* Add margin between the soldier image and patient details */
+    border-radius: 50%; /* Make the container circular */
+    margin-right: 20px;
+    width: 120px; /* Adjust as needed */
+    height: 150px; /* Adjust as needed */
+    overflow: :hidden;
+}
+
+
+/* Style adjustments for the soldier image */
+.soldier-image {
+    width: 100%; /* Ensure the image width is 100% of its container */
+    height: 100%; /* Ensure the image height is 100% of its container */
+    object-fit: cover; /* Ensure the image covers the entire container while maintaining aspect ratio */
+    border-radius: 50%;
+    object-position: top; 
+}
+
+
+.dropdown-container {
+    flex-grow: 1;
+    text-align: center;
+}
+
+/* Flex container for header content */
+.header-content {
+    display: flex;
+    align-items: flex-start; /* Adjust alignment as needed */
+}
+
+.patient-details-box {
+    display: flex;
+    align-items: center;
+    background-color: #f5f5f5;
+    padding: 10px;
+    border: 5px solid #ccc;
+    border-radius: 5px;
+
+}
+
+/* Style adjustments for the patient details box */
+.patient-box {
+    margin-right: 10px; /* Add margin between the icon and text */
+}
+
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    color: #888;
+    font-size: 14px;
+}
