@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
         $ecg=$data['ecg'];
         $temperature=$data['temperature'];
         $timestamp = $data['timestamp'];
-        $dateTime = date('Y-m-d H:i:s', $timestamp);
+        $Medical_Id = $data['Medical_Id'];
 
         // Perform data validation here if needed
 
@@ -54,7 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
             $dataId = $row['total'] + 1;
 
             // Insert data into the medical_data table
-            $sql = "INSERT INTO medical_data VALUES ('$dataId', '$patientId', '$heartRate', '$spo2', '$dateTime', '$ecg','$temperature')";
+            $sql = "INSERT INTO medical_data VALUES ('$dataId', '$patientId', '$heartRate', '$spo2', '$timestamp', '$ecg','$temperature','$Medical_Id')";
 
             if ($conn->query($sql) === TRUE)
             {
@@ -63,8 +63,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
             }
             else
             {
+                //echo($conn->query($sql));
+                $sql_error = mysqli_error($conn);
+
                 $response['status'] = "error";
-                $response['message'] = "Error ";
+               // $response['message'] = "Error ";
+                $response['message'] = "SQL Query Error: " . $sql_error;
             }
 
             // Close the database connection

@@ -105,6 +105,7 @@ if (isset($_POST['patient-dropdown']))
             <p>Gender: <span class="patient-gender"><?php echo isset($patientDetails['Gender']) ? $patientDetails['Gender'] : '-'; ?></span></p>
             <p>Weight: <span class="patient-weight"><?php echo isset($patientDetails['Weight']) ? $patientDetails['Weight'] : '-'; ?></span></p>
             <p>Height: <span class="patient-height"><?php echo isset($patientDetails['Height']) ? $patientDetails['Height'] : '-'; ?></span></p>
+            <p>Referred by: <span class="patient-medicalName"><?php echo isset($patientDetails['Medical_Name']) ? $patientDetails['Medical_Name'] : '-'; ?></span></p>
         </div>
     </div>
 </div>

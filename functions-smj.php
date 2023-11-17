@@ -40,7 +40,8 @@ function getPatientDetails($patientId)
             'Age' => '-',
             'Gender' => '-',
             'Weight' => '-',
-            'Height' => '-'
+            'Height' => '-',
+            'Medical_id' => '-'
         ];
     }
 
@@ -50,6 +51,8 @@ function getPatientDetails($patientId)
     if ($result && $result->num_rows > 0) 
     {
         $patientDetails = $result->fetch_assoc();
+
+        $patientDetails['Medical_Name'] = getMedicalName($patientId);
         return $patientDetails;
     } 
     else 
@@ -59,10 +62,61 @@ function getPatientDetails($patientId)
             'Age' => '-',
             'Gender' => '-',
             'Weight' => '-',
-            'Height' => '-'
+            'Height' => '-',
+            'Medical_Name' => '-'
         ];
     }
 }
+
+
+function getMedicalId($patientId) //for medicalID
+{
+    global $conn;
+
+    $sql = "SELECT `Medical_id` FROM `medical_data` WHERE `Patient Id` = '$patientId' ORDER BY `Timestamp` DESC LIMIT 1"; 
+    $result = $conn->query($sql);
+
+    if ($result && $result->num_rows > 0) 
+    {
+        $row = $result->fetch_assoc();
+        return $row['Medical_id'];
+    } 
+    else 
+    {
+        return 'N/A';
+    }
+}
+
+function getMedicalName($patientId) //medical-id..name
+{
+    global $conn;
+
+    // First, retrieve the Medical_id from the medical_data table
+    $medicalId = getMedicalId($patientId);
+
+    if ($medicalId === 'N/A') 
+    {
+        return 'N/A'; // No valid Medical_id found
+    }
+
+    // Now, use the retrieved Medical_id to fetch the Name from the medical-info table
+    $sql = "SELECT mi.`Name` FROM `medical-info` mi
+            JOIN `medical_data` md ON mi.`Medical_id` = md.`Medical_id`
+            WHERE md.`Medical_id` = '$medicalId'";
+    $result = $conn->query($sql);
+
+    if ($result && $result->num_rows > 0) 
+    {
+        $row = $result->fetch_assoc();
+        return $row['Name'];
+    } 
+    else 
+    {
+        return 'N/A'; // Medical Name not found
+    }
+}
+
+
 
 //for heartrate and spo2
 function getHeartRateFromDatabase($patientId) //to display heartrate
