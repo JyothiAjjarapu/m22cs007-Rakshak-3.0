@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Uploader</title>
+</head>
+<body>
+    <input type="file" id="pdfInput" accept=".pdf">
+    <button onclick="sharePDF()">Share PDF</button>
+
+    <script>
+        function sharePDF() {
+            const input = document.getElementById('pdfInput');
+            const file = input.files[0];
+
+            if (file) {
+                const formData = new FormData();
+                formData.append('pdfFile', file);
+
+                fetch('x2s.php', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.error) {
+                        console.error('Error:', data.error);
+                        alert('Error sharing PDF. Please check the console for details.');
+                    } else {
+                        console.log('PDF shared:', data.link);
+                        alert('PDF shared! Link: ' + data.link);
+                    }
+                })
+                .catch(error => console.error('Error:', error));
+            } else {
+                alert('Please choose a PDF file');
+            }
+        }
+    </script>
+</body>
+</html>

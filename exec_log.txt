@@ -1,0 +1,300 @@
+python capture-image.py "lec2.pdf" > /dev/null 2>&1 &
+Return Code: 0
+Output: Array
+(
+)
+
+python capture-image.py lec1.pdf
+Return Code: 1
+Output: Array
+(
+)
+
+python capture-image.py lec1.pdf
+Return Code: 1
+Output: Array
+(
+)
+
+python capture-image.py "lec1.pdf"
+Return Code: 1
+Output: Array
+(
+)
+
+python capture-image.py "lec2.pdf" > /dev/null 2>&1 &
+Return Code: 0
+Output: Array
+(
+)
+
+python capture-image.py "lec1.pdf"
+Return Code: 1
+Output: Array
+(
+)
+
+python capture-image.py lec1.pdf
+Return Code: 1
+Output: Array
+(
+)
+
+python capture-image.py lec2.pdf
+Return Code: 1
+Output: Array
+(
+)
+
+python capture-image.py lec3-8.pdf
+Return Code: 1
+Output: Array
+(
+)
+
+python capture-image.py sir notes minor1.pdf > /dev/null 2>&1 &
+Return Code: 0
+Output: Array
+(
+)
+
+python capture-image.py lec9-12.pdf > /dev/null 2>&1 &
+Return Code: 0
+Output: Array
+(
+)
+
+python capture-image.py lec1.pdf > /dev/null 2>&1 &
+Return Code: 0
+Output: Array
+(
+)
+
+python capture-image.py lec1.pdf 2>&1
+Return Code: 1
+Output: Array
+(
+    [0] => Traceback (most recent call last):
+    [1] =>   File "C:\xampp\htdocs\spandan\capture-image.py", line 2, in <module>
+    [2] =>     import fitz  # PyMuPDF
+    [3] =>     ^^^^^^^^^^^
+    [4] => ModuleNotFoundError: No module named 'fitz'
+)
+
+python capture-image.py lec9-12.pdf 2>&1
+Return Code: 1
+Output: Array
+(
+    [0] => Traceback (most recent call last):
+    [1] =>   File "C:\xampp\htdocs\spandan\capture-image.py", line 2, in <module>
+    [2] =>     import fitz  # PyMuPDF
+    [3] =>     ^^^^^^^^^^^
+    [4] => ModuleNotFoundError: No module named 'fitz'
+)
+
+python capture-image.py lec9-12.pdf 2>&1
+Return Code: 1
+Output: Array
+(
+    [0] => Traceback (most recent call last):
+    [1] =>   File "C:\xampp\htdocs\spandan\capture-image.py", line 2, in <module>
+    [2] =>     import fitz  # PyMuPDF
+    [3] =>     ^^^^^^^^^^^
+    [4] => ModuleNotFoundError: No module named 'fitz'
+)
+
+python capture-image.py lec9-12.pdf 2>&1
+Return Code: 1
+Output: Array
+(
+    [0] => Traceback (most recent call last):
+    [1] =>   File "C:\xampp\htdocs\spandan\capture-image.py", line 2, in <module>
+    [2] =>     import fitz  # PyMuPDF
+    [3] =>     ^^^^^^^^^^^
+    [4] => ModuleNotFoundError: No module named 'fitz'
+)
+
+python capture-image.py lec1.pdf 2>&1
+Return Code: 1
+Output: Array
+(
+    [0] => Traceback (most recent call last):
+    [1] =>   File "C:\xampp\htdocs\spandan\capture-image.py", line 2, in <module>
+    [2] =>     import fitz  # PyMuPDF
+    [3] =>     ^^^^^^^^^^^
+    [4] => ModuleNotFoundError: No module named 'fitz'
+)
+
+python capture-image.py Ganga Jamuna Components Order.pdf 2>&1
+Return Code: 1
+Output: Array
+(
+    [0] => Traceback (most recent call last):
+    [1] =>   File "C:\xampp\htdocs\spandan\capture-image.py", line 2, in <module>
+    [2] =>     import fitz  # PyMuPDF
+    [3] =>     ^^^^^^^^^^^
+    [4] => ModuleNotFoundError: No module named 'fitz'
+)
+
+python capture-image.py Ganga Jamuna Components Order.pdf 2>&1
+Return Code: 1
+Output: Array
+(
+    [0] => Traceback (most recent call last):
+    [1] =>   File "C:\xampp\htdocs\spandan\capture-image.py", line 2, in <module>
+    [2] =>     import fitz  # PyMuPDF
+    [3] =>     ^^^^^^^^^^^
+    [4] => ModuleNotFoundError: No module named 'fitz'
+)
+
+python capture-image.py SNA-Assignment-1-M22CS007.pdf 2>&1
+Return Code: 1
+Output: Array
+(
+    [0] => Traceback (most recent call last):
+    [1] =>   File "C:\xampp\htdocs\spandan\capture-image.py", line 2, in <module>
+    [2] =>     import fitz  # PyMuPDF
+    [3] =>     ^^^^^^^^^^^
+    [4] => ModuleNotFoundError: No module named 'fitz'
+)
+
+python capture-image.py SNA-Assignment-1-M22CS007.pdf 2>&1
+Return Code: 1
+Output: Array
+(
+    [0] => Traceback (most recent call last):
+    [1] =>   File "C:\xampp\htdocs\spandan\capture-image.py", line 2, in <module>
+    [2] =>     import fitz  # PyMuPDF
+    [3] =>     ^^^^^^^^^^^
+    [4] => ModuleNotFoundError: No module named 'fitz'
+)
+
+python capture-image.py SNA-Assignment-1-M22CS007.pdf 2>&1
+Return Code: 1
+Output: Array
+(
+    [0] => Traceback (most recent call last):
+    [1] =>   File "C:\xampp\htdocs\spandan\capture-image.py", line 2, in <module>
+    [2] =>     import fitz  # PyMuPDF
+    [3] =>     ^^^^^^^^^^^
+    [4] => ModuleNotFoundError: No module named 'fitz'
+)
+
+python capture-image.py SNA-Assignment-1-M22CS007.pdf 2>&1
+Return Code: 1
+Output: Array
+(
+    [0] => Traceback (most recent call last):
+    [1] =>   File "C:\xampp\htdocs\spandan\capture-image.py", line 2, in <module>
+    [2] =>     import fitz  # PyMuPDF
+    [3] =>     ^^^^^^^^^^^
+    [4] => ModuleNotFoundError: No module named 'fitz'
+)
+
+python capture-image.py SNA-Assignment-1-M22CS007.pdf 2>&1
+Return Code: 1
+Output: Array
+(
+    [0] => Traceback (most recent call last):
+    [1] =>   File "C:\xampp\htdocs\spandan\capture-image.py", line 2, in <module>
+    [2] =>     import fitz  # PyMuPDF
+    [3] =>     ^^^^^^^^^^^
+    [4] => ModuleNotFoundError: No module named 'fitz'
+)
+
+C:\xampp\htdocs\spandan\venv\Scripts\python.exe capture-image.py Lecture 3# SNA.pdf
+Return Code: 1
+Output: Array
+(
+    [0] => Usage: python capture-image.py <pdf_filename>
+)
+
+C:\xampp\htdocs\spandan\venv\Scripts\python.exe capture-image.py "Lecture 2 # Social NW Analysis.pdf"
+Return Code: 0
+Output: Array
+(
+    [0] => Image saved successfully at: images/Lecture 2 # Social NW Analysis_page2.png
+)
+
+C:\xampp\htdocs\spandan\venv\Scripts\python.exe capture-image.py "1000050067.pdf"
+Return Code: 0
+Output: Array
+(
+    [0] => Image saved successfully at: images/1000050067_page2.png
+)
+
+C:\xampp\htdocs\spandan\venv\Scripts\python.exe capture-image.py "Chap-01.pdf"
+Return Code: 0
+Output: Array
+(
+    [0] => Image saved successfully at: images/Chap-01_page2.png
+)
+
+C:\xampp\htdocs\spandan\venv\Scripts\python.exe capture-image.py "Chap 5 slides.pdf"
+Return Code: 0
+Output: Array
+(
+    [0] => Image saved successfully at: images/Chap 5 slides_page2.png
+)
+
+C:\xampp\htdocs\spandan\venv\Scripts\python.exe capture-image.py "LUMIQ - Google Docs.pdf"
+Return Code: 0
+Output: Array
+(
+    [0] => Image saved successfully at: images/LUMIQ - Google Docs_page2.png
+)
+
+C:\xampp\htdocs\spandan\venv\Scripts\python.exe capture-image.py "DSA by Shradha Didi & Aman Bhaiya - DSA in 2.5 Months.pdf"
+Return Code: 0
+Output: Array
+(
+    [0] => Image saved successfully at: captured/DSA by Shradha Didi & Aman Bhaiya - DSA in 2.5 Months_page2.png
+)
+
+C:\xampp\htdocs\SMJ\venv\Scripts\python.exe capture-image.py "DSA by Shradha Didi & Aman Bhaiya - DSA in 2.5 Months.pdf"
+C:\xampp\htdocs\SMJ\venv\Scripts\python.exe capture-image.py "DSA by Shradha Didi & Aman Bhaiya - DSA in 2.5 Months.pdf"
+Return Code: 0
+Return Code: 0
+Output: Array
+(
+    [0] => Image saved successfully at: captured/DSA by Shradha Didi & Aman Bhaiya - DSA in 2.5 Months_page2.png
+)
+
+Output: Array
+(
+    [0] => Image saved successfully at: captured/DSA by Shradha Didi & Aman Bhaiya - DSA in 2.5 Months_page2.png
+)
+
+C:\xampp\htdocs\SMJ\venv\Scripts\python.exe capture-image.py "Java-Cheat-Sheet.pdf"
+Return Code: 1
+Output: Array
+(
+)
+
+C:\xampp\htdocs\SMJ\venv\Scripts\python.exe capture-image.py "Java-Cheat-Sheet.pdf"
+Return Code: 1
+Output: Array
+(
+)
+
+C:\xampp\htdocs\SMJ\venv\Scripts\python.exe capture-image.py "DSA by Shradha Didi & Aman Bhaiya - DSA in 2.5 Months.pdf"
+Return Code: 0
+Output: Array
+(
+    [0] => Image saved successfully at: captured/DSA by Shradha Didi & Aman Bhaiya - DSA in 2.5 Months_page2.png
+)
+
+C:\xampp\htdocs\SMJ\venv\Scripts\python.exe capture-image.py "IITJ_BOB.pdf"
+Return Code: 0
+Output: Array
+(
+    [0] => Image saved successfully at: captured/IITJ_BOB_page2.png
+)
+
+C:\xampp\htdocs\spandan\venv\Scripts\python.exe capture-image.py "Ashutosh_Gupta_1706877613874_twelve_lead.pdf"
+Return Code: 0
+Output: Array
+(
+    [0] => Image saved successfully at: captured/Ashutosh_Gupta_2024-03-06_21-22-31.png
+)
+

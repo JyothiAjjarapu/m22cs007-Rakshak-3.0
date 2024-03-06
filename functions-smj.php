@@ -166,20 +166,38 @@ function getTemperatureFromDatabase($patientId)
         return 'N/A';
     }
 }
-function getEcgFromDatabase($patientId) 
+// function getEcgFromDatabase($patientId) 
+// {
+//     global $conn;
+//     $sql = "SELECT `ecg` FROM `medical_data` WHERE `Patient Id` = '$patientId' ORDER BY `Timestamp` DESC LIMIT 1"; 
+//     $result = $conn->query($sql);
+//     if ($result && $result->num_rows > 0) 
+//     {
+//         $row = $result->fetch_assoc();
+//         return (int)$row['ecg'];
+//     } 
+//     else 
+//     {
+//         return 'N/A';
+//     }
+// }
+function getImagePath($patientId)
 {
-    global $conn;
-    $sql = "SELECT `ecg` FROM `medical_data` WHERE `Patient Id` = '$patientId' ORDER BY `Timestamp` DESC LIMIT 1"; 
-    $result = $conn->query($sql);
-    if ($result && $result->num_rows > 0) 
-    {
-        $row = $result->fetch_assoc();
-        return (int)$row['ecg'];
-    } 
-    else 
-    {
+    // Assuming the images are stored in the "images" folder with the Patient ID as the filename
+    $imagePath = "captured/{$patientId}_page2.png"; // Adjust the file extension as needed
+
+    // Check if the image file exists
+    if (file_exists($imagePath)) {
+        return $imagePath;
+    } else {
         return 'N/A';
     }
+}
+
+// Modify this function to use the new getImagePath function
+function getEcgFromDatabase($patientId) 
+{
+    return getImagePath($patientId);
 }
 
 
@@ -247,20 +265,20 @@ function getTemperatureDataFromDatabase($patientId)
     return $tempData;
 }
 
-function getEcgDataFromDatabase($patientId)
-{
-    global $conn;
+// function getEcgDataFromDatabase($patientId)
+// {
+//     global $conn;
 
-    $sql = "SELECT `Timestamp`, `ecg` FROM `medical_data` WHERE `Patient Id` = '$patientId' ORDER BY `Timestamp` ASC"; 
-    $result = $conn->query($sql);
-    $data1 = [];
-    if ($result->num_rows > 0) 
-    {
-        while ($row = $result->fetch_assoc()) 
-        {
-            $data1[] = [ 'x' => $row['Timestamp'], 'y' => (int)$row['ecg'], ];
-        }
-    }
-    return $data1;
-}
+//     $sql = "SELECT `Timestamp`, `ecg` FROM `medical_data` WHERE `Patient Id` = '$patientId' ORDER BY `Timestamp` ASC"; 
+//     $result = $conn->query($sql);
+//     $data1 = [];
+//     if ($result->num_rows > 0) 
+//     {
+//         while ($row = $result->fetch_assoc()) 
+//         {
+//             $data1[] = [ 'x' => $row['Timestamp'], 'y' => (int)$row['ecg'], ];
+//         }
+//     }
+//     return $data1;
+// }
 

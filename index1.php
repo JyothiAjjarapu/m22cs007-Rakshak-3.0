@@ -326,78 +326,44 @@ if (isset($_POST['patient-dropdown']))
                 </div>
 
                
-                <!-- ECG data box -->
-                <div class="data-box">
+             
+            <!-- ECG data box -->
+<div class="data-box">
+    <div class="data-box-inner">
+        <!-- Replace the <img> tag with PHP to dynamically generate the image path -->
+        <?php
+        // Assuming $Ecg contains the patient ID, update it accordingly based on your logic
+        $imagePath = getImagePath($Ecg);
+        ?>
+        <img src="images/ecg-icon.png" alt="ECG Image" class="data-icon">
+        <h3 class="subtitle-small">ECG</h3>
+    </div>
 
-                    <div class="data-box-inner">
-                        <img src="images/heart-rate.jpg" alt="Heart Icon" class="data-icon">
-                        <h3 class="subtitle-small">ECG</h3>
-                    </div>
+    <?php
+if ($role == "patient" || isset($_POST['patient-dropdown'])) {
+    if (isset($_POST['patient-dropdown'])) {
+        $selectedPatientId = $_POST['patient-dropdown'];
+    }
+    $Ecg = getEcgFromDatabase($selectedPatientId);
 
-                    <p class="data-value heart-rate-value"><?php echo $Ecg; ?></p>
-                    <div class="graph">
-                    <?php
-                        if ($role == "patient" || isset($_POST['patient-dropdown'])) 
-                        {
-                            //echo($_POST['patient-dropdown']);
-                            print_r("\n");
-                            if(isset($_POST['patient-dropdown'])) {
-                                $selectedPatientId = $_POST['patient-dropdown'];
-                            }
-                          //  $patientDetails = getPatientDetails($selectedPatientId);
-                            $Ecg = getEcgFromDatabase($selectedPatientId);
-                           // echo $heartRate;
-                            $all = getEcgDataFromDatabase($selectedPatientId) ;
-                         //   print_r($temp);
-                         //   print_r("\n");
+    // Check if it's an image path or a placeholder like 'N/A'
+    if ($Ecg !== 'N/A') {
+        // Display the image with adjusted size
+        //echo '<img src="' . $Ecg . '" alt="ECG Image" class="graph-image" width="200%" height="auto">';
+        echo '<img src="' . $Ecg . '" alt="ECG Image" class="graph-image" id="zoomed-image">';
+        echo '<script>document.getElementById("zoomed-image").style.width = "200%";</script>';
+        echo '<a href="new.html?patientID=' . $selectedPatientId . '">View Patient Files</a>';
 
-                            // Initialize empty arrays for xValues and yValues
-                            $xeValues = [];
-                            $yeValues = [];
 
-                            // Loop through the JSON data and separate x and y values
-                            foreach ($all as $data) 
-                            {
-                                $xeValues[] = $data['x'];
-                                $yeValues[] = $data['y'];
-                            }
+    } else {
+        // Display a placeholder or alternative content
+        echo '<p>No ECG Image available</p>';
+    }
+}
+?>
 
-                            
-                        }
-                        ?>
-                        <canvas id="ecgChart" width="400" height="150">
-                        hello world
-                        <script>
-                             // Use PHP arrays for xValues and yValues
-                                var xValues = <?php echo json_encode($xeValues); ?>;
-                                var yValues = <?php echo json_encode($yeValues); ?>;
+</div>
 
-                                new Chart("ecgChart", {
-                                type: "line",
-                                data: {
-                                    labels: xValues,
-                                    datasets: [{
-                                    label: "ECG ",
-                                    fill: false,
-                                    lineTension: 0,
-                                    backgroundColor: "rgba(255,0,0,1.0",
-                                    borderColor: "rgba(0,0,255,0.1)",
-                                    data: yValues
-                                    }]
-                                },
-                                options: {
-                                    // responsive: false,         // Disable automatic resizing
-                                    // maintainAspectRatio: false
-                                    legend: {display: false},
-                                    scales: {
-                                    yAxes: [{ticks: {min: 6, max:16}}],
-                                    }
-                                }
-                                });
-                            </script>
-                    </div>                    
-                </div>
-            </div>
 
                 </div>
             </div> 
